@@ -14,7 +14,16 @@
 	- 人脸检测
 		- opencv级联分类器
 			- 关于opencv级联分类器，它是使用haar特征的分类器
-			- 首先使用了opencv的级联分类器，使用haarcascade_frontalface_alt2.xml进行人脸识别，发现其精度一般，经常会有误判的情况。
+			- 首先使用了opencv的级联分类器，使用haarcascade_frontalface_alt2.xml进行人脸识别，
+			发现其精度一般，经常会有误判的情况。随着现在检测的人脸越来越多变，室内到室外，有无眼镜，口罩遮挡，
+			使得haar级联分类器表现不佳。
+        - MTCNN
+            - MTCNN是一种基于深度学习的人脸检测和人脸对齐方法
+            - 原理
+            - 结构，分为从粗到精的结构。
+                - Proposal Network(P-Net)
+                - Refine Network(R-Net)
+                - Output Network(O-Net)
     - 人脸对齐
         - alpha0.1版本没有使用人脸对齐
     - 人脸剪裁
@@ -31,4 +40,4 @@
             - 通过使用三元组进行训练
         - 加速验证速度
             - 将数据库中人物保存的图片改为保存人物特征向量。验证时直接使用向量进行验证。
-
+            
